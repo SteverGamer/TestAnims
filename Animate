@@ -261,7 +261,7 @@ function playAnimation(animName, transitionTime, humanoid)
 			currentAnimTrack = humanoid:LoadAnimation(anim)
 		else
 			local animInstance = Instance.new("Animation")
-			animInstance.AnimationId = "rbxassetid://973772659"
+			animInstance.AnimationId = "rbxassetid://782844582"
 			currentAnimTrack = humanoid:LoadAnimation(animInstance)
 			animInstance:Destroy()
 		end
