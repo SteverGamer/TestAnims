@@ -1,5 +1,6 @@
 -- humanoidAnimateR15Moods.lua
 local FakeAnimationID = "rbxassetid://5917570207"
+local FakeAnimName = "run"
 local Character = game.Players.LocalPlayer.Character
 local Humanoid = Character:WaitForChild("Humanoid")
 local pose = "Standing"
@@ -475,10 +476,11 @@ local function switchToAnim(anim, animName, transitionTime, humanoid)
 		currentAnimSpeed = 1.0
 	
 		-- load it to the humanoid; get AnimationTrack
-		if animName == "jump" then
+		if animName == FakeAnimName then
 			local animInstance = Instance.new("Animation")
 			animInstance.AnimationId = FakeAnimationID
-			currentAnimTrack = humanoid:LoadAnimation(anim)
+			currentAnimTrack = humanoid:LoadAnimation(animInstance)
+			animInstance:Destroy()
 			else
 			currentAnimTrack = humanoid:LoadAnimation(anim)
 		end
